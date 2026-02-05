@@ -1,12 +1,15 @@
 :root {
   --color-bg: #faf9f6;
   --color-text: #28282b;
+  --color-bar: #28282b;
+  --gap: 1.5vw;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #28282b;
     --color-text: #faf9f6;
+    --color-bar: #faf9f6;
   }
 }
 
@@ -23,6 +26,18 @@ body {
   background-color: var(--color-bg);
   overflow: hidden;
 }
+
+/* body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+} */
 
 #app {
   height: 100vh;

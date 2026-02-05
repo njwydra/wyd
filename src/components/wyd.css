@@ -1,0 +1,67 @@
+.canvas {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 10vh 5vw;
+  box-sizing: border-box;
+  gap: var(--gap);
+}
+
+.bracket {
+  width: 3vw;
+  border: 1.2vw solid var(--bar-color);
+  flex-shrink: 0;
+}
+.b-l {
+  border-right: none;
+}
+.b-r {
+  border-left: none;
+}
+
+.letter {
+  flex: 1;
+  display: flex;
+  gap: var(--gap);
+}
+
+.bar {
+  background: var(--bar-color);
+  flex: 1;
+}
+
+/* W: Side bars full, middle bar "dipped" at the top */
+.w .left {
+  border-top-left-radius: 40px;
+}
+.w .mid {
+  height: 70%;
+  align-self: flex-end;
+  border-radius: 40px 40px 0 0;
+}
+.w .right {
+  height: 70%;
+  align-self: flex-end;
+  border-bottom-right-radius: 40px;
+}
+
+/* Y: Left bar "cut" at the bottom, right bar full height */
+/* Added your radius fix to the right bar to keep it from looking like 'q' */
+.y .left {
+  height: 65%;
+  align-self: flex-start;
+  border-radius: 0 40px;
+}
+.y .right {
+  border-radius: 40px 0;
+}
+
+/* D: Right bar full height, left block bottom-heavy */
+.d .left {
+  height: 65%;
+  align-self: flex-end;
+  border-radius: 40px 0 0 40px;
+}
+.d .right {
+  border-radius: 40px 0;
+}

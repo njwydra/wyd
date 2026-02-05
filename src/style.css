@@ -3,6 +3,8 @@
   --color-text: #28282b;
   --color-bar: #28282b;
   --gap: 1.5vw;
+  --radius-amount: 40px;
+  --width-bracket: 1.5vw;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,18 +29,6 @@ body {
   overflow: hidden;
 }
 
-/* body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background: var(--bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-} */
-
 #app {
   height: 100vh;
   width: 100vw;
@@ -49,9 +39,4 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#title-svg {
-  width: 100%;
-  height: 100%;
 }

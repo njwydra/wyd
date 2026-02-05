@@ -8,7 +8,8 @@
 
 .bracket {
   width: 3vw;
-  border: var(--width-bracket) solid var(--color-bar);
+  border: var(--border-bracket);
+  filter: var(--filter-bracket);
   flex-shrink: 0;
 }
 .b-l {
@@ -33,6 +34,7 @@
 
 .bar {
   background: var(--color-bar);
+  box-shadow: var(--shadow-bar);
   flex: 1;
 }
 
@@ -76,7 +78,7 @@
   .bracket {
     width: 100%;
     height: calc(2 * var(--width-bracket));
-    border: var(--width-bracket) solid var(--color-bar);
+    border: var(--border-bracket);
   }
 
   .b-l {

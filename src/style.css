@@ -5,6 +5,12 @@
   --gap: 1.5vw;
   --radius-amount: 40px;
   --width-bracket: var(--gap);
+
+  --shadow-emboss: none;
+  --shadow-deboss: none;
+  --shadow-bar: none;
+  --filter-bracket: none;
+  --border-bracket: var(--width-bracket) solid var(--color-bar);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,6 +18,40 @@
     --color-bg: #28282b;
     --color-text: #faf9f6;
     --color-bar: #faf9f6;
+  }
+}
+
+body.theme-neumorphism-deboss,
+body.theme-neumorphism-emboss {
+  --color-bg: #e6e3dd;
+  --color-text: #28282b;
+  --color-bar: #e6e3dd;
+  --border-bracket: none;
+  --filter-bracket: none;
+
+  --shadow-emboss: 6px 6px 10px 0 #bebcb7, -6px -6px 10px 0 #ffffff;
+  --shadow-deboss:
+    inset 6px 6px 10px 0 rgba(166, 164, 159, 0.6),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.9);
+}
+
+body.theme-neumorphism-deboss {
+  --shadow-bar: var(--shadow-deboss);
+}
+
+body.theme-neumorphism-emboss {
+  --shadow-bar: var(--shadow-emboss);
+}
+
+@media (prefers-color-scheme: dark) {
+  body.theme-neumorphism-deboss,
+  body.theme-neumorphism-emboss {
+    --color-bg: #292d32;
+    --color-text: #d1d5db;
+    --color-bar: #292d32;
+
+    --shadow-emboss: 6px 6px 10px #1b1e22, -6px -6px 10px #373c42;
+    --shadow-deboss: inset 6px 6px 10px #1b1e22, inset -6px -6px 10px #373c42;
   }
 }
 
@@ -24,6 +64,29 @@
 @media (max-width: 768px) {
   :root {
     --gap: 2.5vh;
+  }
+}
+
+@media (prefers-contrast: more) {
+  body.theme-neumorphism-deboss,
+  body.theme-neumorphism-emboss {
+    --color-bg: #faf9f6;
+    --color-text: #28282b;
+    --color-bar: #28282b;
+    --border-bracket: var(--width-bracket) solid var(--color-bar);
+    --filter-bracket: none;
+    --shadow-emboss: none;
+    --shadow-deboss: none;
+    --shadow-bar: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body.theme-neumorphism-deboss,
+    body.theme-neumorphism-emboss {
+      --color-bg: #000000;
+      --color-text: #ffffff;
+      --color-bar: #ffffff;
+    }
   }
 }
 

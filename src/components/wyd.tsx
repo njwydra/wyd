@@ -4,11 +4,11 @@ import "./wyd.css";
 
 h;
 
-export const wyd = () => (
-  <div class="canvas">
-    <div class="bracket b-l"></div>
+export const Wyd = () => (
+  <div class="canvas" role="img" aria-label="WYD Logo">
+    <div class="bracket b-l" aria-hidden="true"></div>
 
-    <div className="letters">
+    <div className="letters" aria-hidden="true">
       <div class="letter w">
         <div class="bar left"></div>
         <div class="bar mid"></div>

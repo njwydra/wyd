@@ -4,7 +4,7 @@
   --color-bar: #28282b;
   --gap: 1.5vw;
   --radius-amount: 40px;
-  --width-bracket: 1.5vw;
+  --width-bracket: var(--gap);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,6 +12,18 @@
     --color-bg: #28282b;
     --color-text: #faf9f6;
     --color-bar: #faf9f6;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --gap: 2vw;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --gap: 2.5vh;
   }
 }
 

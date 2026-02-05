@@ -67,3 +67,29 @@
 .d .right {
   border-radius: var(--radius-amount) 0;
 }
+
+@media (max-width: 768px) {
+  .canvas {
+    flex-direction: column;
+  }
+
+  .bracket {
+    width: 100%;
+    height: calc(2 * var(--width-bracket));
+    border: var(--width-bracket) solid var(--color-bar);
+  }
+
+  .b-l {
+    border-bottom: none;
+  }
+
+  .b-r {
+    border-top: none;
+  }
+
+  .letters {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+}
